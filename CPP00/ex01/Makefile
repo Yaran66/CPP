@@ -22,7 +22,7 @@ CC		=	c++
 
 RM		=	rm -rf
 
-CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -pedantic -pendantic
+CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -pedantic
 
 .PHONY:		all clean fclean re
 

@@ -7,10 +7,17 @@
 
 #include "ContactClass.h"
 
-class PhoneBookClass
+class PhoneBook
 {
+public:
+	PhoneBook();
+	~PhoneBook();
+	int Add();
+	void Search() const;
 
+private:
+	Contact _contacts[8];
 };
 
 
-#endif //CPP00_PHONEBOOKCLASS_H
+#endif //PHONEBOOKCLASS_H

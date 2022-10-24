@@ -3,35 +3,31 @@
 //
 
 #include "ContactClass.h"
+#include "PhoneBookClass.h"
 
 int main(void)
 {
-	std:: string command;
-	PhoneBook Book;
+	std:: string input;
+	PhoneBook Ph_Book;
 
-	while(command != "EXIT")
+	std::cout << "commands: ADD || SEARCH || EXIT:" << std::endl;
+	while(input != "EXIT")
 	{
-		std::cout << "input: ADD || SEARCH || EXIT:" << std::endl; // this is
-		// printed every time, event when index in SEARCH requested.
-		getline(std::cin, command);
-		if (command == "ADD")
-		{
-			if (Book.AddContact()) // to create
-				continue; // do we need continue ?????
-		}
-		else if (command == "SEARCH")
+		getline(std::cin, input);
+		if (input == "ADD")
+			Ph_Book.Add();
+		else if (input == "SEARCH")
 		{
 			std::cout << "All contacts:" << std::endl;
-			Book.SearchContact(); // to create
+			Ph_Book.Search();
 		}
-//		else if (command == "EXIT")
-//		{
-//			std::cout << "Thanks for using our PhoneBook" << std::endl;
-//			break;
-//		}
+		else if (input == "EXIT")
+			std::cout << "Thanks for using our PhoneBook, bye for now" << std::endl;
 		else
-			std::cout << "Wrong input, only below are accepted" << std::endl;
+		{
+			std::cout << "Wrong command, only below are accepted" << std::endl;
+			std::cout << " ADD || SEARCH || EXIT " << std::endl;
+		}
 	}
-	std::cout << "Thanks for using our PhoneBook, bye for now" << std::endl;
 	return(0);
 }

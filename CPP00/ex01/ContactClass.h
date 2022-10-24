@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>   //ignore
-#include "PhoneBookClass.h"
+#include "limits"
 
 
 class Contact
@@ -37,6 +37,5 @@ private:
 	std::string		_secret;
 
 };
-
 
 #endif //CONTACTCLASS_H
